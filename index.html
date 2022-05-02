@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <title>One Challenge</title>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <a href="https://www.alura.com.br"><img src="images/Vector.png" class="navLogo"></a>
+        </header>
+        <section class="mainInput">
+            <textarea placeholder="Digite seu texto" id="txtTextArea" cols="30" rows="10"></textarea>
+            <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Apenas letras minúsculas e sem acento.</p>
+        </section>
+        <section class="output">
+            <textarea id="outputText"></textarea>
+            <img id="mainImage" src="images/High quality products 1 1.png">
+            <div id="secondaryText">
+                <h3>Nenhuma mensagem <br>encontrada</h3>
+                <p>Digite um texto que você deseja<br> criptografar ou descriptografar.</p>
+            </div>
+            <button id="copy">Copiar</button>
+        </section>
+        <footer>
+            <div class="bottomContent">
+                <button id="btnCrip" onclick="textCaption()">Criptografar</button>
+                <button id="btnDeCrip" onclick="decrypt()">Descriptografar</button>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

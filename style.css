@@ -1,0 +1,256 @@
+body{
+    margin: 0 ;
+    padding: 0;
+    font-family: 'Inter regular';
+    background-color: #F3F5FC;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*Definition of the size of content and how it will be displayed starts here*/
+.box{
+    /*top, right, bottom, left */
+    margin: 2% 2% 2% 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.navLogo{
+    width: 31.09px;
+    height: 48px;
+}
+/*Definition of the size of content and how it will be displayed ends here*/
+/*Main area starts here*/
+.mainInput{
+    grid-column: 1;
+    max-width: 600px;
+    margin: 2% 0 0 25%;
+    text-align: center;
+}
+
+.mainInput textarea{
+    background-color: #F3F5FC;
+    color: cornflowerblue;
+    width: 680px;
+    height: 400px;
+    border-style: none;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.mainInput p{
+    text-align: left;
+    margin-top: 10% ;
+    margin-left: 2% ;
+    color: #495057;
+}
+
+.mainInput p i{
+    font-size: 20px;
+    color: #495057;
+    font-size: 16px;
+}
+
+textarea::placeholder{
+    color: cornflowerblue;
+}
+
+textarea:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+/*Main area ends here*/
+/*Secondary area starts here*/
+.output{
+    grid-column: 3;
+    margin-top: -10%;
+    background-color: white;
+    width: 350px;
+    height: 600px;
+    text-align: center;
+    border-radius: 32px;
+}
+
+.output img{
+    width: 336px;
+    height: 304px;
+    background-color: white;
+    margin-top: 75px;
+}
+
+.output h3{
+    margin-top: 20px;
+    font-size: 24px;
+    background-color: white;
+}
+
+.output p{
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.output button{
+    background-color: white;
+    width: 300px;
+    height: 60px;
+    padding: 24px;
+    border: none;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 25px;
+    display: none;
+}
+
+.output #copy:active{
+background-color: #225ea7;
+}
+
+.output #outputText{
+    margin-top: 10%;
+    margin-left: 60px;
+    width: 236px;
+    height: 475px;
+    border-style: none;
+    font-weight: 400;
+    font-size: 24px;
+    color: #495057;
+    display: none;
+    background-color: white;
+}
+
+/*Secondary area ends here*/
+/*Bottom area starts here*/
+.bottomContent{
+    display: flex;
+    text-align: center;
+    gap: 30px;
+    margin-left: 25%;
+    margin-top: -10%;
+}
+
+.bottomContent button{
+    background-color: #0A3871;
+    width: 328px;
+    height: 60px;
+    padding: 24px;
+    border: none;
+    border-radius: 24px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    flex-basis: 100%;
+}
+
+.bottomContent #btnCrip:active {
+    background-color: #225ea7;
+}
+
+.bottomContent button:nth-child(2){
+    background-color: #F3F5FC;
+    border: 1px solid #0A3871;
+    color: black;
+}
+
+.bottomContent #btnDeCrip:active{
+   background-color: #a2a4a5;
+}
+/*Bottom area ends here*/
+@media only screen and (max-width: 768px){
+    .box{
+        display: flex;
+        flex-direction: column;
+    }
+    .output img{
+        display: none;
+    }
+    .output{
+        width: 700px;
+        height: 220px;
+        text-align: center;
+        border-radius: 25px;
+        margin-top: 50%;
+    }
+
+    .output h3{
+        margin-top: 50px;
+    }
+
+    .output p{
+        margin-top: 5px;
+    }
+
+    .bottomContent{
+        margin-top: -300px;
+        width: 688px;
+        height: 67px;
+        margin-left: 20px;
+    }
+
+    .bottomContent button{
+        width: 332px;
+        height: 67px;
+        margin-left: -20px;
+    }
+
+    .mainInput{
+        margin-left: 0;
+        margin-top: 10%;
+    }
+
+    .mainInput p{
+        position: absolute;
+        margin-top: 32%;
+        left: 20px;
+    }
+
+    .output button{
+        display: none;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .output #outputText{
+        height: 50px;
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .output{
+        width: 327px;
+        height: 186px;
+        position: absolute;
+        margin-top: 700px;
+        margin-left: 10px;
+    }
+
+    .bottomContent {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        position: absolute;
+        margin-left: 30px;
+    }
+    
+    .mainInput textarea{
+        width: 343px;
+        height: 300px;
+    }
+
+    .mainInput p{
+        margin-top: 20%;
+        margin-left: 20px;
+    }
+
+    .output #outputText{
+        height: 50px;
+        width: 200px;
+    }
+}
